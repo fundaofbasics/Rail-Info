@@ -1,0 +1,54 @@
+<body class="cbp-spmenu-push">
+			<div class="header">
+			<div class="container">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="../index.jsp">Rail Info <span>A Cool Travel</span></a>
+			</div>
+<div class="top-nav">
+				<nav class="top-nav-bottom cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+					 <h3>Menu</h3>
+						<a href="../index.jsp">Home</a>
+						<a href="../reg/reservation.jsp">Reservation</a>
+						<a href="../pnr.jsp">PNR Status</a>
+						<a href="../train.jsp">Train Between Stations</a>
+						<a href="../seat.jsp">Seat Availability</a>
+						<a href="../fare.jsp">Fare Enquiry</a>
+						<a href="../services.jsp">Services</a>
+						<a href="../info.jsp">Information</a>
+						<a href="../booking.html">Booking Locations</a>
+						<a href="../faq.jsp">Help & FAQ</a>
+						<a href="../about.jsp">About</a>
+						<a href="../contact.jsp">Contact</a>
+						<a href="../fb.jsp">Feedback</a>
+						
+						
+				</nav>
+				<div class="main buttonset">	
+						<!-- Class "cbp-spmenu-open" gets applied to menu and "cbp-spmenu-push-toleft" or "cbp-spmenu-push-toright" to the body -->
+					<button id="showRightPush"><img src="../images/menu.png" alt=""/></button>
+				</div>
+					<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+					<script src="../js/classie.js"></script>
+						<script>
+							var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+							showRightPush = document.getElementById( 'showRightPush' ),
+							body = document.body;
+
+							showRightPush.onclick = function() {
+								classie.toggle( this, 'active' );
+								classie.toggle( body, 'cbp-spmenu-push-toleft' );
+								classie.toggle( menuRight, 'cbp-spmenu-open' );
+								disableOther( 'showRightPush' );
+							};
+
+							function disableOther( button ) {
+								if( button !== 'showRightPush' ) {
+									classie.toggle( showRightPush, 'disabled' );
+								}
+							}
+						</script>
+						<!-- /script-for-menu -->
+			 </div>
+			 <div class="clearfix"> </div>
+			 </div>
+			</div>
